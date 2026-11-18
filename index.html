@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rajesh Dumala — Senior Data Analyst & Power BI Developer</title>
+<meta name="description" content="Rajesh Dumala — Data Analyst with 6+ years in Power BI, SQL, Python and Advanced Excel, specialising in sales, dealer-network and operations analytics.">
+<meta property="og:title" content="Rajesh Dumala — Senior Data Analyst & Power BI Developer">
+<meta property="og:description" content="6+ years turning sales, operations and finance data into dashboards that drive decisions.">
+<meta property="og:image" content="assets/profile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fb; --surface:#ffffff; --surface-2:#eef1f7; --text:#121826; --muted:#5b6475;
+  --border:#e2e6ee; --accent:#f2a900; --accent-2:#1f4ed8; --accent-soft:rgba(31,78,216,.08);
+  --shadow:0 10px 30px rgba(18,24,38,.07);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0f17; --surface:#121826; --surface-2:#182032; --text:#e8ecf3; --muted:#9aa4b6;
+    --border:#232d42; --accent:#f5b82e; --accent-2:#6b8cff; --accent-soft:rgba(107,140,255,.12);
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0f17; --surface:#121826; --surface-2:#182032; --text:#e8ecf3; --muted:#9aa4b6;
+  --border:#232d42; --accent:#f5b82e; --accent-2:#6b8cff; --accent-soft:rgba(107,140,255,.12);
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+
+/* Nav */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:-.02em;font-size:1.1rem}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{font-size:.92rem;color:var(--muted);font-weight:500;transition:color .2s}
+.links a:hover{color:var(--text)}
+.icon-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--text);display:grid;place-items:center;cursor:pointer}
+.menu-btn{display:none}
+@media (max-width:820px){
+  .menu-btn{display:grid}
+  .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--border);display:none;padding:8px 0}
+  .links.open{display:flex}
+  .links a{padding:12px 16px;width:100%}
+  .links .icon-btn{margin:8px 16px}
+}
+
+/* Hero */
+.hero{padding:84px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--accent-2);background:var(--accent-soft);padding:6px 12px;border-radius:999px;margin-bottom:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+h1{font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.05;letter-spacing:-.035em;font-weight:800}
+h1 .hl{background:linear-gradient(90deg,var(--accent),#ff7a59);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);margin:16px 0 26px;font-weight:500}
+.lead{max-width:580px;color:var(--muted);margin-bottom:32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:600;font-size:.95rem;transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--text);color:var(--bg)}
+.btn-ghost{border:1px solid var(--border);background:var(--surface)}
+.photo{position:relative;justify-self:center;width:100%;max-width:340px}
+.photo::before{content:"";position:absolute;inset:-14px;border-radius:32px;background:conic-gradient(from 200deg,var(--accent),var(--accent-2),#ff7a59,var(--accent));opacity:.9;z-index:0;filter:blur(1px)}
+.photo img{position:relative;z-index:1;width:100%;aspect-ratio:1/1.08;object-fit:cover;object-position:center 30%;border-radius:24px;border:6px solid var(--bg);display:block}
+.badge{position:absolute;z-index:2;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);border-radius:14px;padding:10px 14px;font-size:.8rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.badge b{font-size:1.1rem}
+.b1{left:-34px;bottom:40px}.b2{right:-26px;top:-10px}
+@media (max-width:820px){.hero{padding:48px 0}.hero-grid{grid-template-columns:1fr;gap:48px}.photo{order:-1;max-width:260px}.b1{left:-10px;bottom:-14px}.b2{right:-10px;top:-24px}}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:64px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px}
+.stat .n{font-size:2rem;font-weight:800;letter-spacing:-.03em}
+.stat .n small{font-size:1rem;color:var(--accent)}
+.stat .l{color:var(--muted);font-size:.88rem}
+@media (max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Sections */
+section{padding:72px 0}
+.sec-head{margin-bottom:36px}
+.sec-head .k{font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--accent-2);text-transform:uppercase;letter-spacing:.12em}
+h2{font-size:clamp(1.7rem,3.2vw,2.3rem);letter-spacing:-.025em;font-weight:800;margin-top:6px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px}
+.about-grid p{color:var(--muted)}
+.about-grid p+p{margin-top:14px}
+.info li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--border);font-size:.93rem}
+.info li:last-child{border:0}
+.info span:first-child{color:var(--muted)}
+.info span:last-child{font-weight:600;text-align:right}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr}}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.skill h3{font-size:1.02rem;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.skill h3 i{font-style:normal;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);font-size:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:.8rem;padding:5px 10px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border);color:var(--text)}
+
+/* Timeline */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--border)}
+.job{position:relative;margin-bottom:22px}
+.job::before{content:"";position:absolute;left:-28px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.job-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline}
+.job h3{font-size:1.15rem}
+.job .co{color:var(--accent-2);font-weight:600}
+.when{font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--muted);background:var(--surface-2);padding:4px 10px;border-radius:8px}
+.job ul{margin:16px 0 0 18px;color:var(--muted)}
+.job li{margin:6px 0}
+.job li::marker{color:var(--accent)}
+.awards{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.award{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;background:var(--surface-2);border-radius:12px;padding:12px}
+.award b{display:block}
+
+/* Projects */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.proj{display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.proj:hover{transform:translateY(-4px);border-color:var(--accent)}
+.proj .viz{height:120px;border-radius:12px;background:var(--surface-2);margin-bottom:18px;display:flex;align-items:flex-end;gap:6px;padding:14px;overflow:hidden}
+.proj .viz span{flex:1;border-radius:4px 4px 0 0;background:linear-gradient(var(--accent-2),color-mix(in srgb,var(--accent-2) 40%,transparent))}
+.proj .viz span.a{background:linear-gradient(var(--accent),color-mix(in srgb,var(--accent) 40%,transparent))}
+.proj h3{font-size:1.08rem;margin-bottom:8px}
+.proj p{color:var(--muted);font-size:.92rem;flex:1}
+.proj .tags{margin-top:16px}
+@media (max-width:900px){.projects{grid-template-columns:1fr}}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.list-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--border)}
+.list-item:last-child{border:0}
+.list-item i{font-style:normal;font-size:1.3rem}
+.list-item b{display:block}
+.list-item small{color:var(--muted)}
+.pill{font-size:.7rem;font-weight:700;color:#b45309;background:rgba(245,158,11,.15);padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+
+/* Contact */
+.contact{text-align:center;padding:56px 26px;background:linear-gradient(135deg,var(--accent-soft),transparent),var(--surface)}
+.contact p{color:var(--muted);max-width:540px;margin:12px auto 28px}
+.contact .cta{justify-content:center}
+footer{padding:32px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">Rajesh<span>.</span>Dumala</a>
+    <div class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+      <button class="icon-btn" id="theme" aria-label="Toggle theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button>
+    </div>
+    <button class="icon-btn menu-btn" id="menu" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Open to Senior Data Analyst / BI roles</div>
+        <h1>Hi, I'm <span class="hl">Rajesh Dumala</span></h1>
+        <p class="role">Senior Data Analyst · Power BI Developer · SQL · Python · Advanced Excel</p>
+        <p class="lead">I turn sales, operations and finance data into dashboards and insights that drive business decisions — with deep domain expertise in automobile dealer-network sales, incentive management and BPO operations analytics.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Get in touch →</a>
+          <a class="btn btn-ghost" href="assets/Rajesh_Dumala_Resume.pdf" download>⬇ Download Resume</a>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="assets/profile.jpg" alt="Portrait of Rajesh Dumala">
+        <div class="badge b1">📊 <span><b>6+</b> yrs analytics</span></div>
+        <div class="badge b2">⚡ Power BI · PL-300</div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="stats reveal">
+        <div class="stat"><div class="n">6<small>+</small></div><div class="l">Years of experience</div></div>
+        <div class="stat"><div class="n">45→30</div><div class="l">Days — incentive payout TAT cut</div></div>
+        <div class="stat"><div class="n">All‑India</div><div class="l">Dealer-network reporting owned</div></div>
+        <div class="stat"><div class="n">2<small>×</small></div><div class="l">Performance & excellence awards</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="k">01 · About</div><h2>Data that management actually uses</h2></div>
+      <div class="about-grid">
+        <div class="card reveal">
+          <p>I'm a Data Analyst with <strong>6+ years of experience</strong> building reporting systems for sales, operations and finance teams. My toolkit spans <strong>SQL, Power BI (DAX, Power Query, data modelling), Python (pandas)</strong> and advanced Excel automation.</p>
+          <p>I've automated manual MIS into self-refreshing dashboards, redesigned incentive processes to cut dealer payout TAT from 45 to 30 days, and deliver KPI reporting to regional and senior management every day.</p>
+          <p>I'm now looking for <strong>Senior Data Analyst, Power BI Developer or BI Analyst</strong> roles where I can own the analytics stack end to end.</p>
+        </div>
+        <div class="card reveal">
+          <ul class="info">
+            <li><span>Current role</span><span>Data Analyst, V2Soft</span></li>
+            <li><span>Location</span><span>Hyderabad / Guntur, AP</span></li>
+            <li><span>Focus</span><span>Sales & Business Analytics</span></li>
+            <li><span>Education</span><span>M.Tech, Power Electronics</span></li>
+            <li><span>Languages</span><span>English · Telugu · Hindi</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="k">02 · Skills</div><h2>Technical toolkit</h2></div>
+      <div class="skills">
+        <div class="card skill reveal"><h3><i>📊</i>BI & Visualisation</h3><div class="tags"><span class="tag">Power BI Desktop & Service</span><span class="tag">DAX</span><span class="tag">Time intelligence</span><span class="tag">Power Query (M)</span><span class="tag">Star-schema modelling</span><span class="tag">Row-level security</span><span class="tag">Scheduled refresh</span><span class="tag">Tableau (basic)</span></div></div>
+        <div class="card skill reveal"><h3><i>🗄️</i>Databases & SQL</h3><div class="tags"><span class="tag">SQL Server</span><span class="tag">MySQL</span><span class="tag">Joins</span><span class="tag">CTEs</span><span class="tag">Window functions</span><span class="tag">Stored procedures</span><span class="tag">Views</span><span class="tag">Query optimisation</span></div></div>
+        <div class="card skill reveal"><h3><i>🐍</i>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">matplotlib</span><span class="tag">Jupyter</span><span class="tag">Report automation</span></div></div>
+        <div class="card skill reveal"><h3><i>📗</i>Excel</h3><div class="tags"><span class="tag">Power Query</span><span class="tag">Power Pivot</span><span class="tag">VBA / Macros</span><span class="tag">XLOOKUP</span><span class="tag">Dynamic arrays</span><span class="tag">Pivot tables</span><span class="tag">Advanced charts</span></div></div>
+        <div class="card skill reveal"><h3><i>☁️</i>Cloud & Data Platforms</h3><div class="tags"><span class="tag">Microsoft Fabric</span><span class="tag">Lakehouse</span><span class="tag">Dataflows Gen2</span><span class="tag">Azure fundamentals</span><span class="tag">Snowflake (basic)</span></div></div>
+        <div class="card skill reveal"><h3><i>✨</i>AI & Productivity</h3><div class="tags"><span class="tag">Copilot in Power BI & Excel</span><span class="tag">GenAI-assisted SQL / DAX</span><span class="tag">Report summarisation</span></div></div>
+        <div class="card skill reveal"><h3><i>📈</i>Analytics</h3><div class="tags"><span class="tag">KPI design</span><span class="tag">Sales forecasting</span><span class="tag">Trend & seasonality</span><span class="tag">Variance analysis</span><span class="tag">Pareto / RCA</span><span class="tag">Cohort analysis</span></div></div>
+        <div class="card skill reveal"><h3><i>🚗</i>Domain</h3><div class="tags"><span class="tag">Automobile sales</span><span class="tag">Dealer networks</span><span class="tag">Incentive & target mgmt</span><span class="tag">Revenue reconciliation</span><span class="tag">BPO ops (SLA, TAT, capacity)</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="k">03 · Experience</div><h2>Where I've worked</h2></div>
+      <div class="timeline">
+        <div class="job card reveal">
+          <div class="job-top"><div><h3>Data Analyst (MIS & Reporting)</h3><div class="co">V2Soft</div></div><span class="when">Feb 2026 – Present</span></div>
+          <ul>
+            <li>Design and maintain Power BI dashboards for sales, dealer performance and operations KPIs — daily, weekly, MTD, QTD and YTD views for regional and senior management.</li>
+            <li>Write SQL queries, views and CTEs to transform sales, billing and production data into a clean reporting model.</li>
+            <li>Build star-schema models and DAX measures (YoY growth, target vs achievement, running totals, regional rank) with row-level security.</li>
+            <li>Automate monthly target and incentive calculations (MIP) with Power Query and SQL, replacing manual Excel workbooks.</li>
+            <li>Develop model/variant-wise and state-wise wholesale & retail analytics and the weekly sales review (WSR) dashboard.</li>
+            <li>Reconcile billable units across LOBs against client data; run capacity forecasting and report productivity, utilisation and SLA/TAT compliance.</li>
+            <li>Perform defect & feedback Pareto / root-cause analysis; manage VAHAN portal uploads and dealer-network master data.</li>
+            <li>Use Copilot and GenAI tools to speed up DAX/SQL development and draft management commentary.</li>
+          </ul>
+        </div>
+        <div class="job card reveal">
+          <div class="job-top"><div><h3>MIS Analyst</h3><div class="co">Quess Corp Ltd</div></div><span class="when">Dec 2022 – Feb 2026</span></div>
+          <ul>
+            <li>Owned end-to-end sales and operations reporting for an all-India automobile dealer network — daily business tracker, WSR, model/variant and state-wise analytics.</li>
+            <li>Migrated key Excel MIS reports to Power BI with scheduled refresh, giving managers self-service access.</li>
+            <li>Automated recurring reports with Power Query, Power Pivot and VBA macros, cutting manual preparation time.</li>
+            <li>Reduced dealer incentive payout TAT from <strong>45 to 30 days</strong> through process redesign and automated calculations.</li>
+            <li>Built billable-unit, utilisation and defect trackers with Pareto analysis; analysed booking-cancellation reasons for sales and product teams.</li>
+            <li>Delivered process trainings; coordinated reporting for 7 managers and 10 assistants.</li>
+          </ul>
+          <div class="awards">
+            <div class="award">🏆<div><b>Best Performance Award</b>Excel MIS process manual & reporting standards</div></div>
+            <div class="award">🥇<div><b>Operational Excellence Award</b>Production, quality & process improvement</div></div>
+            <div class="award">⭐<div><b>Early recognition</b>Recognised by management within six months</div></div>
+          </div>
+        </div>
+        <div class="job card reveal">
+          <div class="job-top"><div><h3>MIS Executive</h3><div class="co">Nisha Designs</div></div><span class="when">Oct 2020 – Oct 2022</span></div>
+          <ul>
+            <li>Built daily, weekly and monthly trackers with data-validation checks for accuracy and completeness.</li>
+            <li>Prepared monthly financial reports — product profitability and budget vs actual.</li>
+            <li>Produced the monthly financial dashboard (booked vs billed revenue) and reconciled billing with Finance.</li>
+            <li>Cleaned and transformed raw data into management information; delivered ad-hoc analysis for leadership.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="k">04 · Projects</div><h2>Selected work</h2></div>
+      <div class="projects">
+        <div class="card proj reveal">
+          <div class="viz"><span style="height:40%"></span><span style="height:65%"></span><span class="a" style="height:85%"></span><span style="height:55%"></span><span style="height:75%"></span><span class="a" style="height:95%"></span></div>
+          <h3>Dealer Sales Performance Dashboard</h3>
+          <p>End-to-end dashboard on dealer sales data: SQL staging tables, star-schema model, DAX measures for target vs achievement, YoY growth and region/dealer ranking, with drill-through by state, model and variant.</p>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">SQL Server</span><span class="tag">DAX</span></div>
+        </div>
+        <div class="card proj reveal">
+          <div class="viz"><span style="height:30%"></span><span style="height:30%"></span><span class="a" style="height:50%"></span><span class="a" style="height:50%"></span><span style="height:75%"></span><span style="height:100%"></span></div>
+          <h3>Incentive Calculation Automation</h3>
+          <p>Rule-based incentive engine replacing manual workbooks — slab-wise calculation, exception reports and a full audit trail for payouts.</p>
+          <div class="tags"><span class="tag">SQL</span><span class="tag">Power Query</span><span class="tag">Excel</span></div>
+        </div>
+        <div class="card proj reveal">
+          <div class="viz"><span style="height:50%"></span><span style="height:70%"></span><span style="height:45%"></span><span style="height:80%"></span><span class="a" style="height:60%;opacity:.6"></span><span class="a" style="height:90%;opacity:.6"></span></div>
+          <h3>Sales Forecasting & Cancellation Analysis</h3>
+          <p>Monthly sales forecast using trend and seasonality, plus booking-cancellation reason analysis with visual insights for management.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">matplotlib</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="k">05 · Credentials</div><h2>Certifications & education</h2></div>
+      <div class="two">
+        <div class="card reveal">
+          <div class="list-item"><i>🎖️</i><div><b>Microsoft Certified: Power BI Data Analyst Associate</b><small>PL-300</small></div></div>
+          <div class="list-item"><i>🧵</i><div><b>Microsoft Certified: Fabric Analytics Engineer Associate <span class="pill">In progress</span></b><small>DP-600</small></div></div>
+          <div class="list-item"><i>📜</i><div><b>SQL for Data Analysis / Python for Data Analysis</b><small>Professional coursework</small></div></div>
+        </div>
+        <div class="card reveal">
+          <div class="list-item"><i>🎓</i><div><b>M.Tech, Power Electronics</b><small>2020</small></div></div>
+          <div class="list-item"><i>🎓</i><div><b>B.Tech, Electrical & Electronics Engineering</b><small>2017</small></div></div>
+          <div class="list-item"><i>🗣️</i><div><b>Languages</b><small>English · Telugu · Hindi</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="card contact reveal">
+        <div class="k" style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent-2);text-transform:uppercase;letter-spacing:.12em">06 · Contact</div>
+        <h2>Let's turn your data into decisions</h2>
+        <p>Hiring for a Senior Data Analyst, Power BI Developer or BI Analyst? I'd love to hear from you.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="mailto:rajeshdumala9642@gmail.com">✉ rajeshdumala9642@gmail.com</a>
+          <a class="btn btn-ghost" href="tel:+918555971495">📞 +91 85559 71495</a>
+          <a class="btn btn-ghost" href="assets/Rajesh_Dumala_Resume.pdf" download>⬇ Resume (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Rajesh Dumala · Hyderabad / Guntur, Andhra Pradesh</div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const root = document.documentElement;
+  try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
+  document.getElementById('theme').addEventListener('click', () => {
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+  });
+  const links = document.getElementById('links');
+  document.getElementById('menu').addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
